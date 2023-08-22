@@ -44,3 +44,11 @@ exports.updateUserValidation = [
   body('email').notEmpty().withMessage('Email is Required'),
   validFields,
 ];
+exports.createMealsVAlidation = [
+  body('name').notEmpty().withMessage('name is requered'),
+  body('price')
+    .notEmpty()
+    .withMessage('price is requered')
+    .withMessage('price must be a correct format'),
+  validFields,
+];
